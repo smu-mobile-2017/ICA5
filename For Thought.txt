@@ -1,0 +1,11 @@
+14. The IOloop is blocking, the code waits to communicate with mongodb and will not push forward until the call:
+
+dbid = self.db.labeledinstances.insert(
+            {"feature":fvals,"label":label,"dsid":sess}
+            );
+
+ in sklearnhandlers.py is completed.
+
+15. Yes if the configuration for the storage engine is changed.  The DB objects are just JSON and would be usable by another engineer.  If do not reconfigure you will receive from mongod the following:
+
+ "exception in initAndListen: 28574 Cannot start server. Detected data files in lab6_db created by storage engine 'wiredTiger'. The configured storage engine is 'mmapv1'., terminating"
